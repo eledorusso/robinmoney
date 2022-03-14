@@ -1,18 +1,52 @@
-body {
-  background-image: url("img/loginBackground.svg");
-  background-repeat: no-repeat;
-  background-size: 100;
-  background-position: top;
+.logo {
+  position: absolute;
+  width: 469.46px;
+  height: 287px;
+  left: 485px;
+  top: 80px;
+}
+
+.iniciarSesion {
+  position: absolute;
+  width: 229px;
+  height: 37px;
+  left: 287px;
+  top: 460px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: #91959d;
+}
+
+.greenRectangle {
+  position: absolute;
+  width: 982px;
+  height: 347px;
+  left: 240px;
+  top: 425px;
+
+  background: rgba(45, 204, 138, 0.3);
+  border-radius: 10px;
 }
 
 .googleButton {
-  margin: 30% 20% 1% 20%;
+  position: absolute;
+  width: 894px;
+  height: 120px;
+  left: 284px;
+  top: 510px;
 }
 
 .terminosCondiciones {
+  position: absolute;
   width: 894px;
   height: 65px;
-  margin-left: 20%;
+  left: 284px;
+  top: 663px;
 
   font-family: "Inter";
   font-style: normal;
@@ -20,9 +54,6 @@ body {
   font-size: 20px;
   line-height: 24px;
   text-align: center;
-  color: #91959d;
-}
 
-a {
-  text-decoration: none !important;
+  color: #91959d;
 }
