@@ -1,0 +1,28 @@
+body {
+  background-image: url("img/loginBackground.svg");
+  background-repeat: no-repeat;
+  background-size: 100;
+  background-position: top;
+}
+
+.googleButton {
+  margin: 30% 20% 1% 20%;
+}
+
+.terminosCondiciones {
+  width: 894px;
+  height: 65px;
+  margin-left: 20%;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 200;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #91959d;
+}
+
+a {
+  text-decoration: none !important;
+}
