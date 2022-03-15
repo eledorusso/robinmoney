@@ -1,63 +1,24 @@
 .mainLogo {
   position: absolute;
-  width: 354px;
-  height: 150.81px;
-  left: 50px;
-  top: 50px;
+  width: 24.58%;
+  height: 14.72%;
+  left: 3.47%;
+  top: 4.88%;
 }
 
 .logout {
   position: absolute;
-  width: 282.73px;
-  height: 100px;
-  left: 1107px;
-  top: 50px;
+  width: 19.63%;
+  height: 9.76%;
+  right: 3.49%;
+  top: 4.88%;
 }
 
 .verPublicidad {
-  position: absolute;
-  width: 894px;
-  height: 166px;
-  left: 280px;
-  top: 275px;
-}
-
-.tusFichas {
-  position: absolute;
-  width: 179px;
-  height: 36px;
-  left: 280px;
-  top: 475px;
-
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 36px;
-
-  color: #91959d;
-}
-
-.iconoPozo {
-  position: absolute;
-  width: 75px;
-  height: 75px;
-  left: 302px;
-  top: 543.5px;
-}
-
-.numeroPozo {
-  display: inline;
-}
-
-.bordePozo {
-  position: absolute;
-  width: 894px;
-  height: 120px;
-  left: 280px;
-  top: 521px;
-
-  border: 5px solid #ffb700;
-  box-sizing: border-box;
-  border-radius: 30px;
+  display: block;
+  width: 62.08%;
+  height: 16.21%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 26.85%;
 }
