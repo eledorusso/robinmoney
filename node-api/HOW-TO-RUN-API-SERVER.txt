@@ -1,0 +1,7 @@
+cd C:\Users\duche\Desktop\Programming\robinmoney\node-api
+node server.js
+Go to localhost:3000
+
+config.js -> configuration for information like the database credentials and the rows we want to show per page when we paginate results.
+
+helper.js -> home for any helper functions, like calculating offset for pagination.
