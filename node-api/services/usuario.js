@@ -15,14 +15,24 @@ async function getMultiple(page = 1){
   return {data, meta};
 }
 
+async function getUser(id){
+  console.log(id)
+  const result = await db.query(
+    `SELECT * FROM usuario WHERE id='${id}'`
+    //`SELECT * FROM usuario WHERE id='1'`
+  );
+  console.log(result)
+  return result;
+}
+
 async function create(usuario){
-  console.log(usuario);
+  //console.log(usuario);
   const result = await db.query(
     `INSERT INTO usuario 
     (nombreUsuario, password, email, nombre, apellido, fechaNacimiento) 
-    VALUES 
-    (${usuario.nombreUsuario}, SHA1(${usuario.password}), ${usuario.email}, ${usuario.nombre}, ${usuario.apellido}, ${usuario.fechaNacimiento})`
+    VALUES ('${usuario.nombreUsuario}', SHA1('${usuario.password}'), '${usuario.email}', '${usuario.nombre}', '${usuario.apellido}', '${usuario.fechaNacimiento}')`
   );
+  
   let message = 'Error in creating user';
 
   if (result.affectedRows) {
@@ -33,10 +43,11 @@ async function create(usuario){
 }
 
 async function update(id, usuario){
+  console.log(id);
   const result = await db.query(
-    `UPDATE usuario 
-    SET nombreUsuario="${usuario.nombreUsuario}", email=${usuario.email}, nombre=${usuario.nombre}, apellido=${usuario.apellido}, fechaNacimiento=${usuario.fechaNacimiento},
-    WHERE id=${id}` 
+    `UPDATE usuario SET
+    nombreUsuario='${usuario.nombreUsuario}', password=SHA1('${usuario.password}'), email='${usuario.email}', nombre='${usuario.nombre}', apellido='${usuario.apellido}', fechaNacimiento='${usuario.fechaNacimiento}',
+    WHERE id='${id}'` 
   );
 
   let message = 'Error in updating user';
@@ -64,6 +75,7 @@ async function remove(id){
 
 module.exports = {
   getMultiple,
+  getUser,
   create,
   update,
   remove

@@ -12,6 +12,16 @@ router.get('/', async function(req, res, next) {
   }
 });
 
+//GET user
+router.get('/:id', async function(req, res, next) {
+  try {
+    res.json(await usuario.getUser(req.params.id));
+  } catch (err) {
+    console.error('User not found');
+    //next(err);
+  }
+})
+
 /* POST user */
 router.post('/', async function(req, res, next) {
   try {
@@ -24,6 +34,7 @@ router.post('/', async function(req, res, next) {
 
 /* PUT user */
 router.put('/:id', async function(req, res, next) {
+  console.log('test')
   try {
     res.json(await usuario.update(req.params.id, req.body));
   } catch (err) {
