@@ -19,7 +19,6 @@ async function getUser(id){
   console.log(id)
   const result = await db.query(
     `SELECT * FROM usuario WHERE id='${id}'`
-    //`SELECT * FROM usuario WHERE id='1'`
   );
   console.log(result)
   return result;
@@ -43,17 +42,35 @@ async function create(usuario){
 }
 
 async function update(id, usuario){
-  console.log(id);
+  //console.log(id);
+  //console.log(usuario);
   const result = await db.query(
     `UPDATE usuario SET
-    nombreUsuario='${usuario.nombreUsuario}', password=SHA1('${usuario.password}'), email='${usuario.email}', nombre='${usuario.nombre}', apellido='${usuario.apellido}', fechaNacimiento='${usuario.fechaNacimiento}',
-    WHERE id='${id}'` 
+    nombreUsuario='${usuario.nombreUsuario}', password=SHA1('${usuario.password}'), email='${usuario.email}', nombre='${usuario.nombre}', apellido='${usuario.apellido}', fechaNacimiento='${usuario.fechaNacimiento}', status='${usuario.status}'
+    WHERE id=${id}` 
   );
 
   let message = 'Error in updating user';
 
   if (result.affectedRows) {
     message = 'User updated successfully';
+  }
+
+  return {message};
+}
+
+async function removeLogical(id){
+  //console.log(id);
+  const result = await db.query(
+    `UPDATE usuario SET
+    status=0
+    WHERE id=${id}`
+  );
+
+  let message = 'Error changing status to 0 of the user';
+
+  if (result.affectedRows) {
+    message = 'User disabled successfully';
   }
 
   return {message};
@@ -78,5 +95,6 @@ module.exports = {
   getUser,
   create,
   update,
+  removeLogical,
   remove
 }

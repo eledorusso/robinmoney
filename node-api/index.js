@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
 });
 
 //URL ENLAZADA CON EL ROUTER
-app.use("/api/usuario", usuariosRouter);
+app.use("/api/1.0/usuario", usuariosRouter);
 
 /* Error handler middleware */
 app.use((err, req, res, next) => {
