@@ -36,3 +36,56 @@
     transform: rotate(360deg);
   }
 }
+
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 32.6%;
+}
+
+.iniciarSesion {
+  padding-top: 4.9%;
+  padding-bottom: 1%;
+  margin-top: 5.66%;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5vw;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 91.03%;
+
+  color: #91959d;
+}
+
+.greenRectangle {
+  background: rgba(45, 204, 138, 0.3);
+  border-radius: 10px;
+  width: 68.19%;
+  height: 33.88%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.googleButton {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 91.03%;
+  margin-top: 0%;
+}
+
+.terminosCondiciones {
+  padding-bottom: 4.31%;
+  margin-top: 3.23%;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 200;
+  font-size: 1.5vw;
+  line-height: 1.5vw;
+  text-align: center;
+  color: #91959d;
+}
