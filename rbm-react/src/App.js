@@ -2,6 +2,8 @@ import logo from './logo.svg';
 import './styles/App.css';
 import logoAndSlogan from './Assets/img/logoAndSlogan.svg';
 import googleButton from './Assets/img/googleButton.svg';
+import { BrowserRouter, Route, Routes} from 'react-router-dom';
+import MainPage from './pages/MainPage';
 
 function App() {
   return (
@@ -21,33 +23,50 @@ function App() {
         </a>
       </header>
     </div>*/
-    <>
-  <img src={logoAndSlogan} className="logoAndSlogan" />
-  <div className="greenRectangle">
-    <div className="iniciarSesion">INICIAR SESIÓN</div>
-    <input type="image" src={googleButton} className="googleButton" />
-    <p className="terminosCondiciones">
-      Al <strong>Iniciar Sesión</strong>, aceptas nuestros
-      <br />
-      <strong>
-        <a
-          href=""
-          style={{ textDecoration: "none" }}
-          target="_blank"
-        >
-          Términos y Condiciones
-        </a>
-      </strong>
-      .
-    </p>
-  </div>
-</>
+    
+      <BrowserRouter>
+      <Routes>
+      <Route path='/' element={    
+        <>  
+        <img src={logoAndSlogan} className="logoAndSlogan" />
+        <div className="greenRectangle">
+          <div className="iniciarSesion">INICIAR SESIÓN</div>
+          <input type="image" src={googleButton} className="googleButton" />
+          <p className="terminosCondiciones">
+            Al <strong>Iniciar Sesión</strong>, aceptas nuestros
+            <br />
+            <strong>
+            <a href="" style={{ textDecoration: "none" }} target="_blank">
+              Términos y Condiciones
+            </a>
+            </strong>
+            .
+          </p>
+
+        </div>
+        </>   } />
+        <Route path="/MainPage" element={<MainPage />}/>
+        </Routes>
+        </BrowserRouter>
+    
   );
 }
 
 export default App;
 
 /*
+         <Router>
+            <Routes>
+            <Route exact path="/">
+                <App />
+              </Route>
+              <Route exact path="/mainPage">
+                <MainPage />
+              </Route>
+            </Routes>
+          </Router> 
+
+
 import React from "react";
 import ReactDOM from 'react-dom';
 
