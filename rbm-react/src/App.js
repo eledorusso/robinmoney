@@ -1,5 +1,7 @@
 import logo from './logo.svg';
-import './App.css';
+import './styles/App.css';
+import logoAndSlogan from './Assets/img/logoAndSlogan.svg';
+import googleButton from './Assets/img/googleButton.svg';
 
 function App() {
   return (
@@ -20,16 +22,16 @@ function App() {
       </header>
     </div>*/
     <>
-  <img src="img/logo+slogan.svg" className="logo" />
+  <img src={logoAndSlogan} className="logoAndSlogan" />
   <div className="greenRectangle">
     <div className="iniciarSesion">INICIAR SESIÓN</div>
-    <input type="image" src="img/googleButton.svg" className="googleButton" />
+    <input type="image" src={googleButton} className="googleButton" />
     <p className="terminosCondiciones">
       Al <strong>Iniciar Sesión</strong>, aceptas nuestros
       <br />
       <strong>
         <a
-          href="pages/terminosCondiciones.html"
+          href=""
           style={{ textDecoration: "none" }}
           target="_blank"
         >
