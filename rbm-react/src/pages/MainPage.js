@@ -4,19 +4,16 @@ import logout from '../Assets/img/logout.svg';
 import verPublicidad from '../Assets/img/verPublicidad.svg';
 import imgPozo from '../Assets/img/imgPozo.svg';
 import retirarDinero from '../Assets/img/retirarDinero.svg';
+import { Link } from 'react-router-dom';
 
 function MainPage() {
   return (
     <>
     <div className="header">
       <img src={logoRBM} className="mainLogo" />
-      <input type="image" src={logout} className="logout" />
+      <Link to="/"><input type="image" src={logout} className="logout" /></Link>
     </div>
-    <input
-      type="image"
-      src={verPublicidad}
-      className="verPublicidad"
-    />
+    <input type="image" src={verPublicidad} className="verPublicidad" />
     <div className="tusFichas">TUS FICHAS</div>
     <div className="bordePozo">
       <img src={imgPozo} className="iconoPozo" />
