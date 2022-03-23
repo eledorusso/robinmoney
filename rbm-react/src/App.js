@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import logoAndSlogan from './Assets/img/logoAndSlogan.svg';
 import googleButton from './Assets/img/googleButton.svg';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';

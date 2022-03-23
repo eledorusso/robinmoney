@@ -13,7 +13,7 @@ function MainPage() {
       <img src={logoRBM} className="mainLogo" />
       <Link to="/"><input type="image" src={logout} className="logout" /></Link>
     </div>
-    <input type="image" src={verPublicidad} className="verPublicidad" />
+    <input className="verPublicidad" type="image" src={verPublicidad} />
     <div className="tusFichas">TUS FICHAS</div>
     <div className="bordePozo">
       <img src={imgPozo} className="iconoPozo" />

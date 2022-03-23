@@ -10,16 +10,14 @@ function Login() {
 <div className="greenRectangle">
   <div className="iniciarSesion">INICIAR SESIÓN</div>
   <Link to="/MainPage"><input type="image" src={googleButton} className="googleButton"/></Link>
-  <p className="terminosCondiciones">
-    Al <strong>Iniciar Sesión</strong>, aceptas nuestros
+  <div className="terminosCondiciones">
+    Al <div className="medium">Iniciar Sesión</div>, aceptas nuestros
     <br />
-    <strong>
-    <a href="" style={{ textDecoration: "none" }} target="_blank">
+    <a href="" style={{ textDecoration: "none" }} target="_blank" className="medium">
       Términos y Condiciones
     </a>
-    </strong>
     .
-  </p>
+  </div>
 </div>
 </>
     );
